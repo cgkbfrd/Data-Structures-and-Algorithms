@@ -70,7 +70,7 @@ class select_insert_sort(object):
 
 
         最优时间复杂度：O(n)【即数组是有序的，只进行n次外层，而内层循环都是执行一次】
-        最坏时间复杂度：O(n2)
+        最坏时间复杂度：O(n2)【此时不加else条件判断，执行次数为1，2，3......n-1】
         稳定性：稳定 【连续交换】
     """
     def insert_sort_2(self, alist):
