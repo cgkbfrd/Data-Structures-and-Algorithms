@@ -1,0 +1,12 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+"""解决上楼梯问题【每次走1或2步】"""
+def  Fibonacci(n):
+    if n == 1:
+        return 1
+    v1 = 1
+    v2 = 2
+    for i in range(3, n+1):
+        v1, v2= v2, v1 + v2
+    return v2 
