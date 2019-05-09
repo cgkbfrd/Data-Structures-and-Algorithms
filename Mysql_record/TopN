@@ -1,0 +1,26 @@
+root:test>  select * from test1;
++----+--------+--------+-------+
+| id | name   | course | score |
++----+--------+--------+-------+
+|  1 | 张三   | 语文   |    80 |
+|  2 | 李四   | 语文   |    90 |
+|  3 | 王五   | 语文   |    93 |
+|  4 | 张三   | 数学   |    77 |
+|  5 | 李四   | 数学   |    68 |
+|  6 | 王五   | 数学   |    99 |
+|  7 | 张三   | 英语   |    90 |
+|  8 | 李四   | 英语   |    50 |
+|  9 | 王五   | 英语   |    89 |
++----+--------+--------+-------+
+
+*********************Top1*************************
+select 
+  name, course, score 
+from test1 as b 
+inner join 
+(select course, max(score) from test1 group by course) as a
+where b.course = a.course and b.score = b.score
+#where exists(select * from (select course, max(score) from test1 group by course) as a where a.course = b.course and a.score = b.score);
+
+**********************TopN*************************
+
