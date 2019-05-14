@@ -1,0 +1,35 @@
+编写一个程序判断给定的数是否为丑数。【丑数就是只包含质因数 2, 3, 5 的正整数】
+
+class Solution(object):
+    def isUgly(self, num):
+        """
+        :type num: int
+        :rtype: bool
+        """
+        # 法一  循环
+        # if num<1:
+        #     return False
+        # while num>1:
+        #     if num%2 == 0: # 对2求余
+        #         num /= 2
+        #     elif num %3 == 0:
+        #         num /=3
+        #     elif num %5 == 0:
+        #         num /=5
+        #     else:
+        #         return False
+        # # 1--->True
+        # return True 
+    
+        # 方法二  递归
+        if num < 1:
+            return False
+        if num == 1:
+            return True
+        if num %2 == 0:
+            return self.isUgly(num/2)
+        if num %3 == 0:
+            return self.isUgly(num/3)
+        if num %5 == 0:
+            return self.isUgly(num/5)
+        return False
