@@ -12,7 +12,7 @@
 
 """
 
-#**************************只能解决一条路径问题存在****************************************
+#**************************此算法只能解决路径是否存在，无法计算路径条数****************************************
 class Solution:
     def hasPath(self, matrix, rows, cols, path):
 
@@ -45,3 +45,8 @@ class Solution:
             return False
         else:
             return False
+        
+        
+if __name__ == "__main__":
+    #t = Solution()
+    #t.hasPath("ABCESFCEADED",3,4,"ABCCED")
