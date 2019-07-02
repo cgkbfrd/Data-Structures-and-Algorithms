@@ -48,5 +48,5 @@ class Solution:
         
         
 if __name__ == "__main__":
-    #t = Solution()
-    #t.hasPath("ABCESFCEADED",3,4,"ABCCED")
+    t = Solution()
+    t.hasPath("ABCESFCEADED",3,4,"ABCCED")
