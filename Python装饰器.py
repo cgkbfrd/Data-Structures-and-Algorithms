@@ -21,10 +21,3 @@ def hello2(name1, name2):
 if __name == '__main__':
     a = hello  #此时返回的是函数wrapped
     b = hello("Python")  #此时将返回的函数wrapped进一步执行wrapped("Python")，相当于走了两步，b是返回函数wrapped执行的结果
-    
-    
-=====================结果===========================
->>> hello('python')
-'<i>hello python</i>'
->>> hello2('python', 'java')
-'<i>hello python, java</i>'
