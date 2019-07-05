@@ -1,8 +1,9 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-
+from functools import wraps
 
 def makeitalic(func):
+    @wrapps(func)
     def wrapped(*args, **kwargs):
         ret = func(*args, **kwargs)
         return '<i>' + ret + '</i>'
